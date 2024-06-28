@@ -1,0 +1,287 @@
+.common_hero_img1 {
+  height: 512px;
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-top: 40px;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .common_hero_shap1 {
+    background-color: white;
+    height: 60px;
+    width: 80%;
+    padding: 0;
+    border-radius: 0px 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("/assets/img/home/radius-vector.svg");
+      top: -2px;
+      left: -37px;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      transform: rotate(180deg);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("/assets/img/home/radius-vector.svg");
+      bottom: -37px;
+      right: 0px;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      transform: rotate(180deg);
+    }
+  }
+  @media screen and (max-width: 991px) {
+    height: 400px;
+
+    @media screen and (max-width: 767px) {
+      height: 356px;
+      border-radius: 20px;
+      .common_hero_shap1 {
+        height: 50px;
+        width: 75%;
+        border-radius: 0px 20px;
+        &::after {
+          background-image: url("/assets/img/home/radius-vector20.svg");
+          top: -2px;
+          left: -18px;
+          width: 20px;
+          height: 20px;
+        }
+        &::before {
+          background-image: url("/assets/img/home/radius-vector20.svg");
+          bottom: -20px;
+          right: -2px;
+          width: 20px;
+          height: 20px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+.common_statictics_area {
+  padding-top: 40px;
+  @media screen and (max-width: 991px) {
+    padding-top: 32px;
+  }
+  .common_statictics {
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h3 {
+      font-size: 32px;
+      line-height: 41px;
+      font-weight: 500;
+      margin: 0;
+      color: $primary;
+    }
+    p {
+      font-size: 18px;
+      line-height: 23px;
+      color: $secondary;
+      margin: 0;
+      padding-top: 10px;
+      max-width: 185px;
+    }
+    @media screen and (max-width: 991px) {
+      height: 152px;
+      h3 {
+        font-size: 24px;
+        line-height: 31px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.common_experience_contain {
+  margin-top: 40px;
+  gap: 32px 0;
+  .common_experience_card {
+    background-color: #fff2ee;
+    padding: 40px 40px 190px;
+    border-radius: 40px;
+    height: 100%;
+    position: relative;
+    h3 {
+      font-size: 32px;
+      line-height: 41px;
+      margin: 0;
+      font-weight: 500;
+      color: $primary;
+    }
+    ul {
+      margin: 0;
+      padding-top: 24px;
+      padding-left: 0;
+      display: grid;
+      gap: 32px;
+      margin: 0;
+
+      li {
+        font-size: 18px;
+        line-height: 23px;
+        color: $secondary;
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        img {
+          transform: translateY(3px);
+        }
+      }
+    }
+    .experience_btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .experience_btn_wrap {
+        padding: 30px;
+        background-color: white;
+        border-radius: 0px 40px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url(/assets/img/home/radius-vector.svg);
+          top: -39px;
+          left: -2px;
+          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url("/assets/img/home/radius-vector.svg");
+          bottom: -1px;
+          right: -39px;
+          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      padding: 14px 16px 124px;
+      border-radius: 20px;
+      h3 {
+        font-size: 18px;
+        line-height: 23px;
+      }
+      ul {
+        padding-top: 16px;
+        li {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      .experience_btn {
+        .experience_btn_wrap {
+          padding: 16px;
+          border-radius: 0px 20px;
+          @media screen and (max-width: 767px) {
+            &::after {
+              background-image: url("/assets/img/home/radius-vector16.svg");
+              width: 16px;
+              height: 16px;
+              top: -16px;
+              left: 0px;
+            }
+            &::before {
+              background-image: url("/assets/img/home/radius-vector16.svg");
+              width: 16px;
+              height: 16px;
+              bottom: -1px;
+              right: -16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .common_experience_card2 {
+    background-color: #f2ecf9;
+    .experience_btn {
+      right: 0;
+      left: auto;
+      .experience_btn_wrap {
+        border-radius: 40px 0px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url(/assets/img/home/radius-vector.svg);
+          top: -39px;
+          right: -2px;
+          left: auto;
+          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px;
+          transform: rotate(270deg);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url("/assets/img/home/radius-vector.svg");
+          bottom: 0px;
+          left: -39px;
+          right: auto;
+          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px;
+          transform: rotate(270deg);
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .experience_btn {
+        .experience_btn_wrap {
+          border-radius: 20px 0px;
+        }
+
+        @media screen and (max-width: 767px) {
+          right: auto;
+          left: 0;
+          .experience_btn_wrap {
+            border-radius: 0px 20px;
+
+            &::after {
+              background-image: url("/assets/img/home/radius-vector16.svg");
+              width: 16px;
+              height: 16px;
+              top: -16px;
+              left: 0px;
+              transform: rotate(0);
+            }
+            &::before {
+              background-image: url("/assets/img/home/radius-vector16.svg");
+              width: 16px;
+              height: 16px;
+              bottom: -1px;
+              right: -16px;
+              left: auto;
+              transform: rotate(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}

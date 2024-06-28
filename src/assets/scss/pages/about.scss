@@ -1,0 +1,551 @@
+.about_hero_wrapper {
+  padding-top: 160px;
+  @media screen and (max-width: 991px) {
+    padding-top: 90px;
+  }
+  .about_hero_contain {
+    max-width: 644px;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      font-size: 48px;
+      line-height: 62px;
+      color: $primary;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      line-height: 23px;
+      margin: 0;
+      color: $secondary;
+      padding-top: 24px;
+    }
+    @media screen and (max-width: 991px) {
+      h1 {
+        font-size: 32px;
+        line-height: 41px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 16px;
+      }
+    }
+  }
+}
+
+.about_careProviders_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  .about_careProviders_area {
+    gap: 32px 0;
+    .about_careProviders_left {
+      // width: 100%;
+      // height: 488px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .about_careProviders_right {
+      padding-left: 16px;
+      h2 {
+        font-size: 40px;
+        line-height: 52px;
+        margin: 0;
+        font-weight: 500;
+        color: $primary;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        padding-top: 24px;
+        color: $secondary;
+        margin: 0;
+      }
+      @media screen and (max-width: 991px) {
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          padding-top: 16px;
+        }
+        @media screen and (max-width: 767px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.about_transforming_wrapper {
+  padding-top: 120px;
+
+  h2 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 500;
+    color: $primary;
+    text-align: center;
+  }
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+    h2 {
+      font-size: 32px;
+      line-height: 41px;
+      @media screen and (max-width: 575px) {
+        text-align: left;
+      }
+    }
+  }
+  .about_transforming_area {
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 53px;
+    @media screen and (max-width: 991px) {
+      padding-top: 32px;
+    }
+    li {
+      background-color: #f2ecf9;
+      border-radius: 20px;
+      .transforming_left {
+        display: flex;
+        .transforming_icon {
+          padding: 15px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .transforming_year_wrap {
+          width: 167px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          padding: 11px;
+          margin-bottom: 10px;
+          position: relative;
+          border-radius: 0 0 16px 16px;
+          p {
+            padding: 4px 18px;
+            background-color: #ff7a57;
+            display: inline-block;
+            margin: 0;
+            border-radius: 16px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: white;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/img/home/radius-vector16.svg");
+            top: -1px;
+            left: -16px;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            transform: rotate(180deg);
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/img/home/radius-vector16.svg");
+            top: -1px;
+            right: -15px;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            transform: rotate(90deg);
+          }
+          @media screen and (max-width: 767px) {
+            width: 120px;
+            @media screen and (max-width: 575px) {
+              width: 100%;
+              margin: 0;
+              padding: 10px 13px;
+              justify-content: flex-start;
+              border-radius: 0 0 0 16px;
+              &::before {
+                bottom: -15px;
+                top: auto;
+                right: 0;
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+      .transforming_right {
+        margin: 0;
+        padding: 0px 25px;
+        font-size: 24px;
+        line-height: 31px;
+        color: $secondary;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 20px;
+          line-height: 24px;
+          @media screen and (max-width: 991px) {
+            font-size: 16px;
+            line-height: 20px;
+            @media screen and (max-width: 575px) {
+              padding: 16px 74px 16px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_meet_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 500;
+    color: $primary;
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      font-size: 32px;
+      line-height: 41px;
+    }
+  }
+  .about_meet_area {
+    gap: 63px 0;
+    padding-top: 80px;
+    @media screen and (max-width: 991px) {
+      padding-top: 24px;
+    }
+    .about_meet_card {
+      transition: all 0.5s;
+      cursor: pointer;
+
+      .about_meet_img {
+        width: 100%;
+        height: 402px;
+        border-radius: 40px;
+        overflow: hidden;
+        transition: all 0.5s;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 500;
+        color: $primary;
+        padding-top: 32px;
+        margin: 0;
+      }
+      h6 {
+        font-size: 16px;
+        line-height: 20px;
+        color: $secondary;
+        font-weight: 400;
+        margin: 0;
+        padding-top: 7px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        padding-top: 16px;
+        color: $primary;
+        // max-width: 300px;
+        span {
+          transition: all 0.5s;
+          background: linear-gradient(
+            to bottom,
+            rgba($primary, 1) 0%,
+            rgba($primary, 1) 98%
+          );
+          background-size: 0px 1px;
+          background-repeat: no-repeat;
+          background-position: left 100%;
+        }
+      }
+      &:hover {
+        transform: translateY(-10px);
+        .about_meet_img {
+          border-radius: 16px;
+        }
+        p {
+          span {
+            background-size: 100% 1px;
+          }
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .about_meet_img {
+          height: 370px;
+          border-radius: 16px;
+        }
+        @media screen and (max-width: 575px) {
+          h6 {
+            font-size: 14px;
+            line-height: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_certifications_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .about_certifications_area {
+    padding: 40px 24px 24px;
+    background: #eeecf5;
+    border-radius: 20px;
+
+    h2 {
+      font-size: 40px;
+      line-height: 52px;
+      font-weight: 500;
+      color: $primary;
+      margin: 0;
+      @media screen and (max-width: 991px) {
+        font-size: 32px;
+        line-height: 41px;
+        @media screen and (max-width: 575px) {
+          padding-bottom: 24px;
+        }
+      }
+    }
+
+    .about_certifications_contain {
+      padding-top: 40px;
+      gap: 24px 0;
+      .about_certifications_card {
+        background-color: white;
+        padding: 24px;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        text-align: center;
+        .about_certifications_img {
+          width: 160px;
+          height: 160px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          margin: 0;
+          color: $secondary;
+          padding-top: 24px;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        padding-top: 32px;
+      }
+    }
+  }
+}
+
+.about_delivery_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .about_delivery_area {
+    width: 100%;
+    height: 865px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+    @media screen and (max-width: 767px) {
+      height: 698px;
+    }
+
+    img {
+      position: absolute;
+      border-radius: 16px;
+      &:nth-child(1) {
+        width: 349px;
+        height: auto;
+        top: 38px;
+        left: 0;
+      }
+      &:nth-child(2) {
+        width: 225px;
+        height: auto;
+        top: 0;
+        right: 357px;
+      }
+      &:nth-child(3) {
+        width: 330px;
+        height: auto;
+        top: 73px;
+        right: 0;
+      }
+      &:nth-child(4) {
+        width: 274px;
+        height: auto;
+        bottom: 0;
+        left: 0;
+      }
+      &:nth-child(5) {
+        width: 470px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+      }
+      @media screen and (max-width: 1199px) {
+        &:nth-child(1) {
+          width: 220px;
+        }
+        &:nth-child(2) {
+          width: 160px;
+        }
+        &:nth-child(3) {
+          width: 260px;
+        }
+        &:nth-child(4) {
+          width: 230px;
+        }
+        &:nth-child(5) {
+          width: 274px;
+        }
+
+        @media screen and (max-width: 991px) {
+          &:nth-child(1) {
+            width: 200px;
+          }
+          &:nth-child(2) {
+            width: 150px;
+            right: 240px;
+          }
+          &:nth-child(3) {
+            width: 220px;
+          }
+          &:nth-child(4) {
+            width: 232px;
+          }
+          &:nth-child(5) {
+            width: 260px;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          &:nth-child(1) {
+            width: 139px;
+          }
+          &:nth-child(2) {
+            width: 102px;
+            right: 190px;
+          }
+          &:nth-child(3) {
+            width: 150px;
+          }
+          &:nth-child(4) {
+            width: 132px;
+          }
+          &:nth-child(5) {
+            width: 174px;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          border-radius: 7px;
+          &:nth-child(1) {
+            width: 139px;
+            top: 120px;
+          }
+          &:nth-child(2) {
+            width: 102px;
+            right: 164px;
+          }
+          &:nth-child(3) {
+            width: 150px;
+            top: 36px;
+          }
+          &:nth-child(4) {
+            width: 132px;
+            left: auto;
+            right: 0;
+          }
+          &:nth-child(5) {
+            width: 174px;
+            right: auto;
+            left: 0;
+            bottom: 48px;
+          }
+        }
+      }
+    }
+
+    .about_delivery_title {
+      max-width: 548px;
+      text-align: center;
+      h2 {
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 500;
+        color: $primary;
+        margin: 0;
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0;
+        color: $secondary;
+        padding-top: 16px;
+      }
+      a {
+        margin-top: 32px;
+      }
+
+      @media screen and (max-width: 767px) {
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          padding-top: 16px;
+        }
+        a {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}

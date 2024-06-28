@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Customers</title>
+  </head>
+
+  <body>
+    @@include('components/header.html')
+
+    <!-- Customers us / common hero section  -->
+    <section class="about_hero_wrapper">
+      <div class="container">
+        <div class="about_hero_contain">
+          <h1>Boost your value-based care performance</h1>
+          <p>
+            See assured returns on your care delivery performance and enhanced
+            patient satisfaction.
+          </p>
+        </div>
+        <div class="common_hero_img1 position-relative">
+          <div
+            class="position-absolute w-100 top-0 end-0 d-flex justify-content-end"
+          >
+            <div class="common_hero_shap1 position-relative"></div>
+          </div>
+          <img src="/assets/img/Customers/banner.webp" alt="banner" />
+        </div>
+      </div>
+    </section>
+
+    <!-- statictics section -->
+    <section class="home_statictics_wrapper">
+      <div class="container">
+        <h2 class="title_center">What better VBC looks like with us</h2>
+        <div
+            class="common_statictics_area row justify-content-center align-items-baseline"
+            id="counter__wrap"
+        >
+          <div class="col-lg-3 col-6">
+            <div class="common_statictics">
+              <div>
+                <h3><span class="counter__" data-number="270"></span>M</h3>
+                <p>In shared-savings recognized</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="common_statictics">
+              <div>
+                <h3><span class="counter__" data-number="97"></span>%</h3>
+                <p>Quality score across all lines of business</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="common_statictics">
+              <div>
+                <h3><span class="counter__" data-number="1.6"></span>M</h3>
+                <p>Lives managed</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="common_statictics">
+              <div>
+                <h3><h3><span class="counter__" data-number="1000"></span></h3>
+                <p>Providers served</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer carelist -->
+    <section class="Customer_carelist_wraper">
+      <div class="container">
+        <div class="Customer_carelist_img">
+          <img src="/assets/img/Customers/care-list1.webp" alt="care-list1" />
+        </div>
+
+        <div class="Customer_carelist_contain">
+          <h2>Empowering care networks to provide the best care possible</h2>
+          <ul class="row Customer_carelist">
+            <li class="col-md-6">
+              <img src="/assets/img/home/list-star1.svg" alt="list-star1" />
+              Shared savings
+            </li>
+            <li class="col-md-6">
+              <img src="/assets/img/home/list-star1.svg" alt="list-star2" />
+              Low investment in infrastructure
+            </li>
+            <li class="col-md-6">
+              <img src="/assets/img/home/list-star1.svg" alt="list-star3" />
+              Empower your care teams to enable you to be efficient
+            </li>
+            <li class="col-md-6">
+              <img src="/assets/img/home/list-star1.svg" alt="list-star4" />
+              Gain sustainability to keep your practice autonomous
+            </li>
+            <li class="col-md-6">
+              <img src="/assets/img/home/list-star1.svg" alt="list-star5" />
+              Saves you time from going through large data to focus on care
+              delivery
+            </li>
+          </ul>
+          <a href="javascript:" class="button orchid r-b-btn"
+            ><span>Consult with us</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    @@include('components/footer.html')
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+  </body>
+</html>

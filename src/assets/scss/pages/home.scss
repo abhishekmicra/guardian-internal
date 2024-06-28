@@ -1,0 +1,561 @@
+.title_center {
+  max-width: 520px;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 500;
+  color: $primary;
+  margin: 0px auto;
+  text-align: center;
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+    line-height: 41px;
+  }
+}
+
+.home_hero_wrapper {
+  height: 725px;
+  width: 100%;
+  padding: 20px 20px 0px;
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    padding: 90px 16px 0px;
+    @media screen and (max-width: 575px) {
+      height: 625px;
+    }
+  }
+  .home_hero_area {
+    // background-image: url(/assets/img/home/banner1.webp);
+    // background-size: cover;
+    // background-position: top;
+    // background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    align-items: end;
+    position: relative;
+    overflow: hidden;
+
+    .home_hero_img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        @media screen and (max-width: 575px) {
+          height: 60%;
+          @media screen and (max-width: 440px) {
+            height: 50%;
+          }
+        }
+      }
+      @media screen and (max-width: 575px) {
+        .home_img_space {
+          height: 40%;
+          width: 100%;
+          @media screen and (max-width: 440px) {
+            height: 50%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      align-items: flex-start;
+      border-radius: 16px;
+    }
+
+    .home_hero_contain {
+      width: 50%;
+      padding: 29px 24px 21px 90px;
+      background-color: #fff;
+      border-radius: 0px 40px;
+      position: relative;
+      @media screen and (max-width: 1300px) {
+        padding-left: 20px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("/assets/img/home/radius-vector.svg");
+        top: -38px;
+        left: 0;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/assets/img/home/radius-vector.svg");
+        bottom: -1px;
+        right: -40px;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+      }
+      h1 {
+        font-size: 56px;
+        line-height: 72px;
+        font-weight: 500;
+        margin: 0;
+        color: $primary;
+      }
+      .hero_avatars_wrap {
+        display: inline-block;
+        transform: translateY(-10px);
+        p {
+          display: flex;
+          padding: 0;
+          .hero_avatars {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: 4px solid white;
+            &:nth-child(2) {
+              margin-left: -20px;
+            }
+
+            &:nth-child(3) {
+              margin-left: -20px;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        color: $secondary;
+        padding-top: 24px;
+        margin: 0;
+      }
+      .home_hero_btn {
+        margin-top: 32px;
+      }
+
+      @media screen and (max-width: 991px) {
+        h1 {
+          font-size: 40px;
+          line-height: 52px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          padding-top: 16px;
+        }
+        .home_hero_btn {
+          margin-top: 24px;
+        }
+      }
+      @media screen and (max-width: 575px) {
+        width: 100%;
+        border-radius: 0px;
+        padding: 0;
+        background: transparent;
+
+        &::after {
+          display: none;
+        }
+        &::before {
+          background-image: url(/assets/img/home/radius-vector16.svg);
+          bottom: 50px;
+          right: -1px;
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 16px;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(180deg);
+        }
+
+        .home_hero_text {
+          background-color: #fff;
+          padding-bottom: 24px;
+        }
+
+        .home_hero_btn {
+          padding: 0px 16px 16px 0px;
+          display: inline-block;
+          background-color: #fff;
+          margin-top: 0;
+          position: relative;
+          border-radius: 0 0 16px 0;
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/img/home/radius-vector16.svg");
+            top: 0px;
+            right: -15px;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            transform: rotate(90deg);
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/img/home/radius-vector16.svg");
+            bottom: -16px;
+            left: -1px;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.home_statictics_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .home_statictics_area {
+    padding-top: 40px;
+    @media screen and (max-width: 991px) {
+      padding-top: 32px;
+    }
+    .home_statictics {
+      height: 165px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h3 {
+        font-size: 32px;
+        line-height: 41px;
+        font-weight: 500;
+        margin: 0;
+        color: $primary;
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        color: $secondary;
+        margin: 0;
+        padding-top: 10px;
+        max-width: 185px;
+      }
+      @media screen and (max-width: 991px) {
+        height: 152px;
+        h3 {
+          font-size: 24px;
+          line-height: 31px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.home_healthcare_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .home_healthcare_area {
+    gap: 32px 0;
+    .home_healthcare_image {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .home_healthcare_contain {
+      padding-left: 16px;
+      @media screen and (max-width: 991px) {
+        padding-left: 0;
+      }
+      h2 {
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 500;
+        margin: 0;
+        color: $primary;
+        max-width: 500px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        color: $secondary;
+        margin: 0;
+        max-width: 530px;
+        padding-top: 24px;
+      }
+      a {
+        margin-top: 48px;
+      }
+      @media screen and (max-width: 991px) {
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          padding-top: 16px;
+        }
+        a {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+.home_experience_area {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+}
+
+.home_pioneered_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  .home_pioneered_area {
+    background-image: url("/assets/img/home/healthcare2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 831px;
+    width: 100%;
+    position: relative;
+    border-radius: 40px;
+    @media screen and (max-width: 991px) {
+      height: 520px;
+      @media screen and (max-width: 767px) {
+        border-radius: 16px;
+      }
+    }
+    .home_pioneered_contain {
+      background-color: white;
+      max-width: 50%;
+      padding: 0px 24px 40px 0px;
+      border-radius: 40px 0px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("/assets/img/home/radius-vector.svg");
+        top: 0;
+        right: -38px;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        transform: rotate(90deg);
+      }
+      h2 {
+        font-size: 40px;
+        line-height: 52px;
+        margin: 0;
+        font-weight: 500;
+        color: $primary;
+        max-width: 546px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0;
+        color: $secondary;
+        padding-top: 24px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding-bottom: 30px;
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        padding-bottom: 30px;
+        max-width: 100%;
+        margin-left: 0;
+        border-radius: 0;
+
+        &::after {
+          background-image: url("/assets/img/home/radius-vector16.svg");
+          top: auto;
+          bottom: -15px;
+          right: 0;
+          width: 16px;
+          height: 16px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .home_pioneered_btn {
+      border-radius: 0px 0px 40px 0px;
+      background-color: white;
+      display: inline-block;
+      padding: 0px 35px 30px 0px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("/assets/img/home/radius-vector.svg");
+        top: 0;
+        right: -38px;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        transform: rotate(90deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/assets/img/home/radius-vector.svg");
+        bottom: -39px;
+        left: -2px;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        transform: rotate(90deg);
+      }
+      @media screen and (max-width: 767px) {
+        padding: 4px 38px 28px 0px;
+        border-radius: 0 0 16px 0px;
+
+        &::after {
+          background-image: url("/assets/img/home/radius-vector16.svg");
+          right: -15px;
+          width: 16px;
+          height: 16px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url("/assets/img/home/radius-vector16.svg");
+          bottom: -16px;
+          left: -2px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.home_resources_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  .home_resources_title {
+    h2 {
+      font-size: 40px;
+      line-height: 52px;
+      font-weight: 500;
+      margin: 0;
+      color: $primary;
+      @media screen and (max-width: 991px) {
+        font-size: 32px;
+        line-height: 41px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      a {
+        display: none;
+      }
+    }
+  }
+  .resources_card_wrap {
+    padding-top: 40px;
+    gap: 32px 0px;
+    .resources_card {
+      padding: 8px;
+      cursor: pointer;
+      .resources_card_img {
+        width: 100%;
+        height: 353px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.5s;
+        }
+      }
+      p {
+        font-size: 24px;
+        line-height: 31px;
+        margin: 0;
+        color: $primary;
+        padding: 16px;
+        span {
+          transition: all 0.5s;
+          background: linear-gradient(
+            to bottom,
+            rgba($primary, 1) 0%,
+            rgba($primary, 1) 98%
+          );
+          background-size: 0px 2px;
+          background-repeat: no-repeat;
+          background-position: left 100%;
+        }
+      }
+      &:hover {
+        p {
+          span {
+            background-size: 100% 2px;
+          }
+        }
+        .resources_card_img {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
+      @media screen and (max-width: 991px) {
+        padding: 0;
+        .resources_card_img {
+          height: 328px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 23px;
+          padding: 16px 0px 0px 0px;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      padding-top: 32px;
+    }
+  }
+  .r-b-btn {
+    margin-top: 32px;
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+// Guardian Solutions ==============================}
+
+.guardianS_banner_wrapper {
+  padding-top: 160px;
+  @media screen and (max-width: 991px) {
+    padding-top: 90px;
+  }
+
+  .guardianS_banner_title {
+    gap: 16px 0;
+    h1 {
+      font-size: 48px;
+      line-height: 62px;
+      margin: 0;
+      font-weight: 500;
+      color: $primary;
+    }
+    p {
+      font-size: 18px;
+      line-height: 23px;
+      margin: 0;
+      color: $primary;
+    }
+    @media screen and (max-width: 991px) {
+      h1 {
+        font-size: 32px;
+        line-height: 41px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.guardianS_statictics_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  h2 {
+    max-width: 736px;
+  }
+}
+
+.guardianS_delivery_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  h2 {
+    max-width: 736px;
+  }
+}
+
+.guardianS_efficiency_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  h2 {
+    max-width: 736px;
+  }
+  .guardianS_efficiency_area {
+    padding-top: 40px;
+    gap: 25px 0px;
+    @media screen and (max-width: 991px) {
+      padding-top: 32px;
+    }
+    .guardianS_efficiency_card {
+      background-color: $light_orchid;
+      border-radius: 20px;
+      padding: 24px;
+      height: 100%;
+      transition: all 0.5s;
+
+      cursor: pointer;
+      .efficiency_icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: $highlight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0;
+        padding-top: 16px;
+        color: $secondary;
+      }
+      @media screen and (max-width: 575px) {
+        padding: 16px;
+      }
+      &:hover {
+        transition: all 0.5s;
+        transform: scale(1.03);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      }
+    }
+  }
+}

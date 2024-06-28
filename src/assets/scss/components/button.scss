@@ -1,0 +1,56 @@
+@import "_variables";
+
+.button {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 40px;
+  padding: 17px 24px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    padding: 11px 24px;
+  }
+
+  &.orchid {
+    color: #ffffff;
+    background-color: $highlight;
+  }
+
+  &.white {
+    background-color: white;
+    color: $highlight;
+  }
+
+  &.w_148 {
+    width: 148px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    backdrop-filter: blur(6px);
+    background-color: #ffffff46;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s;
+    border-radius: 40px;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+}
