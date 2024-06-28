@@ -267,40 +267,23 @@
         <div class="container">
             <div
                 class="home_resources_title d-flex align-items-center justify-content-md-between justify-content-center">
-                <h2>Resources</h2>
+                <h2>Case study</h2>
                 <a href="javascript:" class="button orchid"><span>Start reading</span></a>
             </div>
-            <div class="row resources_card_wrap">
-                <div class="col-md-6">
-                    <div class="resources_card">
-                        <div class="resources_card_img">
-                            <img src="/assets/img/home/blog1.webp" alt="" />
-                        </div>
-                        <p><span>Enhanced Emergency Department Utilization Management</span></p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="resources_card">
-                        <div class="resources_card_img">
-                            <img src="/assets/img/home/blog2.webp" alt="" />
-                        </div>
-                        <p><span>Local Group KPI Dashboard Development for MSO</span></p>
-                    </div>
-                </div>
-            </div>
+            @@include('components/resources-card.html')
             <a href="javascript:" class="button orchid r-b-btn"> Start reading</a>
         </div>
     </section>
-
+ 
     <!-- healthcare delivery -->
     <section class="about_delivery_wrapper">
         <div class="container">
             <div class="about_delivery_area">
-                <img src="/assets/img/about/delivery1.webp" alt="">
-                <img src="/assets/img/about/delivery2.webp" alt="">
-                <img src="/assets/img/about/delivery3.webp" alt="">
-                <img src="/assets/img/about/delivery4.webp" alt="">
-                <img src="/assets/img/about/delivery5.webp" alt="">
+                <img src="/assets/img/about/delivery1.webp" alt="" class="g_image">
+                <img src="/assets/img/about/delivery2.webp" alt="" class="g_image">
+                <img src="/assets/img/about/delivery3.webp" alt="" class="g_image">
+                <img src="/assets/img/about/delivery4.webp" alt="" class="g_image">
+                <img src="/assets/img/about/delivery5.webp" alt="" class="g_image">
                 <div class="about_delivery_title">
                     <h2>Transform healthcare delivery with us</h2>
                     <p>We are committed to delivering value to our customers and partners. We believe that
@@ -317,7 +300,28 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/assets/js/app.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.about_delivery_wrapper',
+                start: 'top 70%', 
+                end: 'bottom 30%', 
+                scrub: 1 
+            }
+        });
+
+        tl.from('.g_image', {
+            y: 300,
+            ease: "ease",
+            stagger: 0.1 
+        });
+    </script>
 
 </body>
 

@@ -31,7 +31,7 @@
         display: flex;
         align-items: center;
         gap: 28px;
-        padding: 16px 16px 16px 24px;
+        padding: 16px;
         border: 1px solid #e1e1e5;
         backdrop-filter: blur(10px);
         background-color: #ffffffb2;
@@ -58,6 +58,10 @@
           li {
             a {
               color: $dark_blue;
+            }
+
+            .nav_link_a {
+              padding: 8px;
             }
 
             .nav_dropdown {
@@ -294,7 +298,7 @@
       transition: all 0.3s;
     }
     .nav_list_open {
-      max-height: 85vh;
+      max-height: 77vh;
       transition: all 0.5s;
     }
 

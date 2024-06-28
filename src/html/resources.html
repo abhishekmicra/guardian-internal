@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/favicon.svg" />
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Resources</title>
+  </head>
+  <body>
+    @@include('components/header.html')
+
+    <!-- resources hero section -->
+    <section class="resources_hero_wrapper">
+      <div class="container">
+        <h1>Pioneering insights in value-based care from experts</h1>
+      </div>
+    </section>
+
+    <section class="blog_list_wrapper">
+      <div class="container">
+        <h2 class="title_center">Case study</h2>
+        @@include('components/resources-card.html')
+      </div>
+    </section>
+
+    @@include('components/footer.html')
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+  </body>
+</html>
