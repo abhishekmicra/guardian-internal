@@ -407,7 +407,10 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: fill;
+      @media screen and (max-width: 767px) {
+        object-fit: cover;
+      }
     }
     @media screen and (max-width: 991px) {
       height: 261px;
@@ -524,9 +527,8 @@
     height: 118px;
   }
   @media screen and (max-width: 768px) {
-    img{
+    img {
       border-radius: 20px;
-      
     }
     // max-height: 400px;
     &::before {

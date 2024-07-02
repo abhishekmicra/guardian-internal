@@ -187,5 +187,26 @@
         }
       }
     }
+    .footer_contain_bottom {
+      padding: 20px 40px 0;
+      margin-top: 40px;
+      border-top: 1px solid #e1e1e5;
+      gap: 12px;
+      @media screen and (max-width: 991px) {
+        padding: 16px 13px 0;
+      }
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        color: #adabb7;
+        margin: 0;
+        span {
+          margin: 0px 16px;
+        }
+        @media screen and (max-width: 991px) {
+          text-align: center;
+        }
+      }
+    }
   }
 }
