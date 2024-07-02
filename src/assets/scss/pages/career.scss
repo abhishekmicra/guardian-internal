@@ -1,0 +1,579 @@
+.career_listing_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  .career_listing_area {
+    gap: 32px 0px;
+    .career_listing_contain {
+      padding-left: 16px;
+      @media screen and (max-width: 767px) {
+        padding: 0;
+      }
+      h2 {
+        font-size: 40px;
+        line-height: 52px;
+        color: $primary;
+        margin: 0;
+        font-weight: 500;
+        max-width: 530px;
+      }
+      ul {
+        margin: 0;
+        padding: 40px 0 0 0;
+        display: grid;
+        gap: 24px;
+        li {
+          gap: 16px;
+          font-size: 18px;
+          line-height: 23px;
+          color: $secondary;
+          p {
+            margin: 0;
+          }
+          img {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+      @media screen and (max-width: 991px) {
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        ul {
+          padding: 24px 0 0 0;
+          li {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.career_map_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .career_map_area {
+    overflow: hidden;
+    margin-top: 40px;
+    border-radius: 40px;
+    @media screen and (max-width: 991px) {
+      margin-top: 32px;
+      border-radius: 20px;
+    }
+    .career_map {
+      width: 100%;
+      height: 421px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        height: 231px;
+      }
+    }
+
+    .career_map_contain {
+      padding: 32px 88px 32px 72px;
+      background-color: #f2ecf9;
+
+      h5 {
+        font-size: 18px;
+        line-height: 23px;
+        color: #000;
+        font-weight: 500;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: $primary;
+        padding-top: 8px;
+      }
+      .career_map_cta {
+        padding-left: 30px;
+      }
+      @media screen and (max-width: 991px) {
+        padding: 16px;
+        .career_map_cta {
+          padding-left: 0px;
+          @media screen and (max-width: 767px) {
+            flex-flow: column;
+            gap: 16px;
+            align-items: start !important;
+            justify-content: unset !important;
+            padding-top: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.career_invest_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .career_invest_area {
+    padding: 40px 24px 24px 24px;
+    background-color: #eeecf5;
+    border-radius: 40px;
+    @media screen and (max-width: 991px) {
+      border-radius: 20px;
+    }
+    h2 {
+      max-width: 856px;
+    }
+    .career_invest_cards {
+      padding-top: 40px;
+      gap: 16px 0;
+      .career_invest_card {
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        text-align: center;
+        padding: 24px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .career_invest_icon {
+          width: 50px;
+          height: 50px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p {
+          margin: 0;
+          padding-top: 24px;
+          color: $primary;
+          font-size: 16px;
+          line-height: 20px;
+          max-width: 193px;
+        }
+      }
+    }
+  }
+}
+
+.career_review_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+
+  .career_review_area {
+    width: 100%;
+    height: 390px;
+    background: $highlight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background-image: url(/assets/img/career/BG-line.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .career_review_center {
+      max-width: 459px;
+      overflow-x: hidden;
+      height: max-content;
+      .career_review {
+        p {
+          font-size: 24px;
+          line-height: 31px;
+          color: white;
+          margin: 0;
+          text-align: center;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/img/career/review.svg");
+            background-repeat: no-repeat;
+            width: 27px;
+            height: 27px;
+            top: -5px;
+            left: -15px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("/assets/img/career/review.svg");
+            background-repeat: no-repeat;
+            width: 27px;
+            height: 27px;
+            bottom: -5px;
+            right: 0px;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .review_swip_container {
+        max-width: 300px;
+        overflow: hidden;
+        position: relative;
+        .review_swiper {
+          margin-top: 50px;
+          .swiper-slide {
+            .review_card {
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              .review_avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 3px solid white;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              .review_name {
+                padding-top: 16px;
+                text-align: center;
+                display: none;
+                min-width: 111px;
+                h6 {
+                  font-size: 18px;
+                  line-height: 23px;
+                  font-weight: 500;
+                  color: white;
+                  margin: 0;
+                }
+                p {
+                  padding-top: 8px;
+                  font-size: 16px;
+                  line-height: 20px;
+                  color: white;
+                  margin: 0;
+                }
+              }
+            }
+            transition: all 0.3s ease;
+
+            &.swiper-slide-active {
+              // transform: scale(1.4);
+              .review_name {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.career_opportunities_wrapper {
+  padding-top: 120px;
+  @media screen and (max-width: 991px) {
+    padding-top: 64px;
+  }
+  .opportunities_filter_wrapper {
+    padding-top: 40px;
+    max-width: 856px;
+    margin: 0px auto;
+    gap: 16px 0;
+
+    @media screen and (max-width: 991px) {
+      padding-top: 24px;
+    }
+
+    .opportunities_filter {
+      padding: 9px 16px;
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid #e1e1e5;
+      text-align: start;
+      border-radius: 6px;
+      font-size: 16px;
+      line-height: 20px;
+      color: $primary;
+
+      &::after {
+        background-image: url(/assets/img/navbar/down-arrow.svg);
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 40%;
+        right: 16px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: none;
+        vertical-align: middle;
+        transition: all 0.4s;
+      }
+
+      &.show {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .row > * {
+      padding: 0 !important;
+    }
+  }
+
+  .c_opportuniti_list_wrap {
+    padding-top: 56px;
+    display: grid;
+    gap: 40px;
+    ul {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      h3 {
+        font-size: 32px;
+        line-height: 41px;
+        margin: 0;
+        font-weight: 500;
+        color: $primary;
+        span {
+          font-size: 24px;
+          line-height: 31px;
+          font-weight: 400;
+        }
+      }
+
+      li {
+        background-color: #f2ecf9;
+        padding: 24px;
+        border-radius: 20px;
+        h4 {
+          font-size: 24px;
+          line-height: 31px;
+          margin: 0;
+          color: $primary;
+          font-weight: 400;
+        }
+        p {
+          margin: 0;
+          font-size: 18px;
+          line-height: 23px;
+          color: $secondary;
+          padding-top: 8px;
+        }
+        a {
+          display: inline-block;
+          padding: 17px 24px;
+          border-radius: 40px;
+          border: 1px solid #7b3fc7;
+          background-color: white;
+          color: #7b3fc7;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      padding-top: 35px;
+
+      ul {
+        h3 {
+          font-size: 24px;
+          line-height: 31px;
+          span {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+        li {
+          padding: 24px;
+          border-radius: 16px;
+          @media screen and (max-width: 767px) {
+            flex-flow: column;
+            align-items: start !important;
+            gap: 24px;
+          }
+          h4 {
+            font-size: 18px;
+            line-height: 23px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 20px;
+            padding-top: 16px;
+          }
+
+          a {
+            padding: 8px 24px;
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// career details -----------------------------------------
+
+.careerD_hero_wrapper {
+  margin: 20px 20px 0px;
+  background-color: #f2ecf9;
+  padding: 127px 40px 40px 40px;
+  text-align: center;
+  border-radius: 40px;
+
+  @media screen and (max-width: 767px) {
+    margin: 10px 10px 0px;
+    padding: 112px 30px 40px 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+    color: $primary;
+    font-weight: 500;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+    padding-top: 24px;
+    color: $secondary;
+  }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 32px;
+      line-height: 41px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.careerD_contain_wrapper {
+  padding-top: 80px;
+  h2 {
+    font-size: 32px;
+    line-height: 41px;
+    font-weight: 500;
+    margin: 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 64px;
+    h2 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+  .careerD_contain_area {
+    display: grid;
+    gap: 40px;
+    @media screen and (max-width: 767px) {
+      gap: 24px;
+    }
+    .careerD_c_top {
+      .careerD_c_paragraph {
+        padding-top: 40px;
+        display: grid;
+        gap: 16px;
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          color: $primary;
+          margin: 0;
+        }
+        @media screen and (max-width: 767px) {
+          padding-top: 16px;
+        }
+      }
+    }
+    .careerD_c_middle {
+      ul {
+        margin: 0;
+        padding: 40px 0 0 0;
+        display: grid;
+        gap: 25px;
+        li {
+          gap: 20px;
+          font-size: 16px;
+          line-height: 20px;
+          color: $primary;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        p {
+          padding-left: 40px;
+          font-size: 16px;
+          line-height: 20px;
+          color: $primary;
+          margin: 0;
+          span {
+            background-color: #e1e1e5;
+            padding: 0px 4px;
+            border-radius: 6px;
+            display: inline-block;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          padding: 24px 0 0 0;
+          gap: 16px;
+          li {
+            gap: 16px;
+          }
+          p {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .careerD_c_bottom {
+      ul {
+        padding: 43px 0 0 0;
+        margin: 0;
+        gap: 16px 0;
+        li {
+          gap: 20px;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+          font-size: 16px;
+          line-height: 20px;
+          color: $primary;
+        }
+        @media screen and (max-width: 767px) {
+          padding: 24px 0 0 0;
+          li {
+            gap: 16px;
+          }
+        }
+      }
+    }
+  }
+}
