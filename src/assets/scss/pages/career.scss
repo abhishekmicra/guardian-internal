@@ -189,7 +189,6 @@
 
     .career_review_center {
       max-width: 459px;
-      overflow-x: hidden;
       height: max-content;
       .career_review {
         p {
@@ -223,7 +222,7 @@
         }
       }
       .review_swip_container {
-        max-width: 300px;
+        width: 251px;
         overflow: hidden;
         position: relative;
         .review_swiper {
@@ -234,8 +233,8 @@
               flex-flow: column;
               align-items: center;
               .review_avatar {
-                width: 50px;
-                height: 50px;
+                width: 38px;
+                height: 38px;
                 border-radius: 50%;
                 overflow: hidden;
                 border: 3px solid white;
@@ -270,6 +269,10 @@
 
             &.swiper-slide-active {
               // transform: scale(1.4);
+              .review_avatar {
+                width: 50px;
+                height: 50px;
+              }
               .review_name {
                 display: block;
               }
