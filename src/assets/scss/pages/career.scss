@@ -645,27 +645,44 @@
       padding: 40px;
       @media screen and (max-width: 767px) {
         padding: 16px;
+        border-radius: 20px;
       }
     }
     .careerD_form_contain {
       padding: 80px;
       background-color: white;
       border-radius: 20px;
+
       @media screen and (max-width: 991px) {
         padding: 40px;
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
         @media screen and (max-width: 767px) {
           padding: 16px;
         }
       }
+
       h2 {
         font-size: 40px;
         line-height: 52px;
         font-weight: 500;
         color: $primary;
+        margin: 0;
+
+        @media screen and (max-width: 767px) {
+          font-size: 32px;
+          line-height: 41px;
+        }
       }
       .careerD_form {
         padding-top: 40px;
         gap: 16px 0;
+
+        @media screen and (max-width: 767px) {
+          padding-top: 32px;
+        }
 
         .careerD_form_input {
           border: 1px solid #e1e1e5;
@@ -751,13 +768,24 @@
         font-size: 16px;
         line-height: 32px;
         font-weight: 500;
+        @media screen and (max-width: 767px) {
+          margin-top: 32px;
+          padding: 11px 24px;
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
       .c_f_description {
         font-size: 14px;
         line-height: 18px;
         color: #adabb7;
         padding-top: 40px;
+
+        @media screen and (max-width: 767px) {
+          padding-top: 32px;
+        }
       }
+
       // .row > * {
       //   padding: 0px 8px !important;
       // }
