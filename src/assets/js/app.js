@@ -49,6 +49,27 @@ $(document).ready(function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll(".nav_link_a");
+  const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active_nav");
+    }
+  });
+
+  dropdownLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link
+        .closest(".dropdown")
+        .querySelector(".nav_dropdown_link")
+        .classList.add("active_nav");
+    }
+  });
+});
+
 // // Humbuger Open
 // let humbugerBg = document.getElementById("navBg");
 // function openHumbuger() {
