@@ -498,6 +498,7 @@
   @media screen and (max-width: 767px) {
     margin: 10px 10px 0px;
     padding: 112px 30px 40px 30px;
+    border-radius: 20px;
   }
 
   h1 {
@@ -640,10 +641,22 @@
     padding: 80px;
     border-radius: 40px;
     background-color: #f2ecf9;
+    @media screen and (max-width: 991px) {
+      padding: 40px;
+      @media screen and (max-width: 767px) {
+        padding: 16px;
+      }
+    }
     .careerD_form_contain {
       padding: 80px;
       background-color: white;
       border-radius: 20px;
+      @media screen and (max-width: 991px) {
+        padding: 40px;
+        @media screen and (max-width: 767px) {
+          padding: 16px;
+        }
+      }
       h2 {
         font-size: 40px;
         line-height: 52px;
@@ -652,7 +665,102 @@
       }
       .careerD_form {
         padding-top: 40px;
+        gap: 16px 0;
+
+        .careerD_form_input {
+          border: 1px solid #e1e1e5;
+          border-radius: 8px;
+          overflow: hidden;
+          input {
+            border: 0;
+            padding: 17px;
+            font-size: 16px;
+            line-height: 20px;
+            color: $primary;
+
+            &::placeholder {
+              font-size: 16px;
+              line-height: 20px;
+              color: $primary;
+            }
+          }
+          .career_drop {
+            padding: 17px;
+            width: 100%;
+            background-color: transparent;
+            text-align: start;
+            font-size: 16px;
+            line-height: 20px;
+            color: $primary;
+
+            &::after {
+              background-image: url(/assets/img/navbar/down-arrow.svg);
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              top: 40%;
+              right: 16px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              border: none;
+              vertical-align: middle;
+              transition: all 0.4s;
+            }
+
+            &.show {
+              &::after {
+                transform: rotate(180deg);
+              }
+            }
+          }
+          textarea {
+            border: 0;
+            height: 165px;
+            font-size: 16px;
+            line-height: 20px;
+            color: $primary;
+            padding: 17px;
+            &::placeholder {
+              font-size: 16px;
+              line-height: 20px;
+              color: $primary;
+            }
+          }
+        }
+
+        .c_f_i_text {
+          font-size: 14px;
+          line-height: 18px;
+          margin: 0;
+          padding-top: 16px;
+        }
+        .c_f_i_file {
+          height: 165px;
+        }
+        .c_f_i_d {
+          overflow: visible;
+        }
       }
+      .c_f_btn {
+        display: inline-block;
+        margin-top: 48px;
+        padding: 12px 24px;
+        background-color: $highlight;
+        color: white;
+        border-radius: 40px;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 500;
+      }
+      .c_f_description {
+        font-size: 14px;
+        line-height: 18px;
+        color: #adabb7;
+        padding-top: 40px;
+      }
+      // .row > * {
+      //   padding: 0px 8px !important;
+      // }
     }
   }
 }
