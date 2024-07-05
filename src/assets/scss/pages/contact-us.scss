@@ -1,0 +1,19 @@
+.contact_hero_wrapper {
+  .about_hero_contain {
+    max-width: 736px;
+    p {
+      max-width: 628px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.contact_form_wrapper {
+  .careerD_form_area {
+    .careerD_form_contain {
+      @media screen and (max-width: 767px) {
+        padding: 24px 16px;
+      }
+    }
+  }
+}

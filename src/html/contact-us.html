@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/favicon.svg" />
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Contact Us</title>
+  </head>
+  <body>
+    @@include('components/header.html')
+
+    <!-- Contact Us / common hero section  -->
+    <section class="about_hero_wrapper contact_hero_wrapper">
+      <div class="container">
+        <div class="about_hero_contain">
+          <h1>Begin empowering your care network with Guardian solutions</h1>
+          <p>
+            Drive exceptional quality care, and sustainable returns with
+            tech-enabled solutions built by experts in value-based care.
+          </p>
+        </div>
+        <div class="common_hero_img1 position-relative">
+          <div
+            class="position-absolute w-100 top-0 end-0 d-flex justify-content-end"
+          >
+            <div class="common_hero_shap1 position-relative"></div>
+          </div>
+          <img src="/assets/img/contact-us/contact-banner.webp" alt="banner" />
+        </div>
+      </div>
+    </section>
+
+    <!-- contact form  -->
+    <section class="careerD_form_wrapper contact_form_wrapper">
+      <div class="container">
+        <div class="careerD_form_area">
+          <div class="careerD_form_contain">
+            <h2>Consult with us</h2>
+            <form action="">
+              <div class="careerD_form row">
+                <div class="col-md-6">
+                  <div class="careerD_form_input w-100">
+                    <input type="text" placeholder="First Name" class="w-100" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="careerD_form_input w-100">
+                    <input type="text" placeholder="Last Name" class="w-100" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="careerD_form_input w-100">
+                    <input type="email" placeholder="Email" class="w-100" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="careerD_form_input w-100">
+                    <input type="text" placeholder="Job Title" class="w-100" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="careerD_form_input w-100">
+                    <input type="text" placeholder="Company" class="w-100" />
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:void(0)" class="c_f_btn">Submit</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="career_map_wrapper">
+      <div class="container">
+        <h2 class="title_center">Where to find us</h2>
+        <div class="career_map_area">
+          <div class="career_map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8722183560394!2d-81.30818552368937!3d28.603609985392037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e76f980ad90927%3A0x8863078582839d57!2s483%20N%20Semoran%20Blvd%20%23204%2C%20Winter%20Park%2C%20FL%2032792%2C%20USA!5e0!3m2!1sen!2sin!4v1719221976864!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="career_map_contain row">
+            <div class="col-md-6">
+              <div>
+                <h5>Headquarters Address</h5>
+                <p>483 N Semoran Blvd Suite 204, Winter Park, FL 32792</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="career_map_cta d-flex align-items-center justify-content-between"
+              >
+                <div>
+                  <h5>Contact Details</h5>
+                  <p>info@emailid.com</p>
+                </div>
+                <a href="javascript:" class="button orchid"
+                  ><span>Get Direction</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/footer.html')
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+  </body>
+</html>
