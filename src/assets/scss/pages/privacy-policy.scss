@@ -1,0 +1,146 @@
+.privacy_hero_wrapper {
+  margin: 20px 20px 0px;
+  background-color: #f2ecf9;
+  padding: 127px 40px 40px 40px;
+  text-align: center;
+  border-radius: 40px;
+
+  @media screen and (max-width: 767px) {
+    margin: 10px 10px 0px;
+    padding: 88px 30px 32px 30px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+    color: $primary;
+    font-weight: 500;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+    padding-top: 24px;
+    color: $secondary;
+  }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 32px;
+      line-height: 41px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 8px;
+    }
+  }
+}
+
+.privacy_contain_wrapper {
+  padding-top: 80px;
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    color: $primary;
+    font-weight: 400;
+    a {
+      color: #ff7a57;
+      font-weight: 500;
+    }
+  }
+  .privacy_title {
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0;
+    font-weight: 500;
+    color: #1c1636;
+  }
+  .privacy_sub_title {
+    font-size: 18px;
+    line-height: 23px;
+    color: $primary;
+    font-weight: 500;
+    margin: 0;
+  }
+  .privacy_contain_area {
+    display: grid;
+    gap: 40px;
+    .privacy_contain_01 {
+      display: grid;
+      gap: 20px;
+    }
+    .privacy_contain_02 {
+      display: grid;
+      gap: 16px;
+
+      .privacy_contain_02_sub {
+        display: grid;
+        gap: 16px;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          p {
+            padding-bottom: 16px;
+          }
+          li {
+            list-style-type: disc;
+            font-size: 16px;
+            color: $primary;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .privacy_contain_03 {
+      display: grid;
+      gap: 20px;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 24px;
+        li {
+          display: flex;
+          gap: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: $primary;
+          p {
+            padding-top: 16px;
+          }
+          ul {
+            margin: 0;
+            padding: 16px 0 0 0;
+            gap: 0;
+
+            li {
+              list-style-type: disc;
+              list-style-position: inside;
+              font-weight: 400;
+              display: unset;
+            }
+          }
+        }
+      }
+    }
+    .privacy_contain_04 {
+      display: grid;
+      gap: 16px;
+      h6 {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        padding-bottom: 3px;
+      }
+    }
+  }
+}
