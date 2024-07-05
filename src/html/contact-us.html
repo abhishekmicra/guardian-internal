@@ -43,41 +43,81 @@
         <div class="careerD_form_area">
           <div class="careerD_form_contain">
             <h2>Consult with us</h2>
-            <form action="">
+            <form id="consultForm" action="javascript:void(0);">
               <div class="careerD_form row">
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
-                    <input type="text" placeholder="First Name" class="w-100" />
+                    <input
+                      type="text"
+                      id="firstName"
+                      placeholder="First Name"
+                      class="w-100"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
-                    <input type="text" placeholder="Last Name" class="w-100" />
+                    <input
+                      type="text"
+                      id="lastName"
+                      placeholder="Last Name"
+                      class="w-100"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="careerD_form_input w-100">
-                    <input type="email" placeholder="Email" class="w-100" />
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Email"
+                      class="w-100"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
-                    <input type="text" placeholder="Job Title" class="w-100" />
+                    <input
+                      type="text"
+                      id="jobTitle"
+                      placeholder="Job Title"
+                      class="w-100"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
-                    <input type="text" placeholder="Company" class="w-100" />
+                    <input
+                      type="text"
+                      id="company"
+                      placeholder="Company"
+                      class="w-100"
+                      required
+                    />
                   </div>
                 </div>
               </div>
-              <a href="javascript:void(0)" class="c_f_btn">Submit</a>
+              <button type="submit" class="c_f_btn">Submit</button>
             </form>
+          </div>
+        </div>
+        <div class="success_submit_wrapper" style="display: none">
+          <div class="success_submit_area">
+            <div class="ssa_contain">
+              <h2>Your submission has been received!</h2>
+              <p>We strive to respond within 2 working days.</p>
+              <p id="submittedData"></p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- contact map  -->
     <section class="career_map_wrapper">
       <div class="container">
         <h2 class="title_center">Where to find us</h2>
@@ -126,5 +166,63 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/assets/js/app.min.js"></script>
+
+    <script>
+      document
+        .getElementById("consultForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting normally
+
+          // Simple validation
+          let isValid = true;
+          const fields = [
+            "firstName",
+            "lastName",
+            "email",
+            "jobTitle",
+            "company",
+          ];
+          let formData = {};
+
+          fields.forEach(function (field) {
+            const input = document.getElementById(field);
+            if (input.value.trim() === "") {
+              isValid = false;
+              input.style.borderColor = "red";
+            } else {
+              input.style.borderColor = "";
+              formData[field] = input.value.trim();
+            }
+          });
+
+          // Check email format
+          const email = document.getElementById("email").value;
+          const emailPattern =
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          if (!emailPattern.test(email)) {
+            isValid = false;
+            document.getElementById("email").style.borderColor = "red";
+          } else {
+            document.getElementById("email").style.borderColor = "";
+          }
+
+          if (isValid) {
+            // Hide form and show success message
+            document.querySelector(".careerD_form_area").style.display = "none";
+            document.querySelector(".success_submit_wrapper").style.display =
+              "block";
+
+            // Display submitted data
+            let submittedDataText = `Submitted Details:<br>
+                              First Name: ${formData.firstName}<br>
+                              Last Name: ${formData.lastName}<br>
+                              Email: ${formData.email}<br>
+                              Job Title: ${formData.jobTitle}<br>
+                              Company: ${formData.company}`;
+            document.getElementById("submittedData").innerHTML =
+              submittedDataText;
+          }
+        });
+    </script>
   </body>
 </html>
