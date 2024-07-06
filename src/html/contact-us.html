@@ -40,13 +40,13 @@
     <!-- contact form  -->
     <section class="careerD_form_wrapper contact_form_wrapper">
       <div class="container">
-        <div class="careerD_form_area">
+        <div class="careerD_form_area contact_form_area">
           <div class="careerD_form_contain">
             <h2>Consult with us</h2>
             <form id="consultForm" action="javascript:void(0);">
               <div class="careerD_form row">
                 <div class="col-md-6">
-                  <div class="careerD_form_input w-100">
+                  <div class="careerD_form_input contact_form_input w-100">
                     <input
                       type="text"
                       id="firstName"
@@ -57,7 +57,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="careerD_form_input w-100">
+                  <div class="careerD_form_input contact_form_input w-100">
                     <input
                       type="text"
                       id="lastName"
@@ -68,7 +68,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="careerD_form_input w-100">
+                  <div class="careerD_form_input contact_form_input w-100">
                     <input
                       type="email"
                       id="email"
@@ -79,7 +79,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="careerD_form_input w-100">
+                  <div class="careerD_form_input contact_form_input w-100">
                     <input
                       type="text"
                       id="jobTitle"
@@ -90,7 +90,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="careerD_form_input w-100">
+                  <div class="careerD_form_input contact_form_input w-100">
                     <input
                       type="text"
                       id="company"
@@ -181,45 +181,37 @@
             "jobTitle",
             "company",
           ];
-          let formData = {};
 
           fields.forEach(function (field) {
             const input = document.getElementById(field);
+            const parent = input.closest(".contact_form_input");
             if (input.value.trim() === "") {
               isValid = false;
-              input.style.borderColor = "red";
+              parent.style.borderColor = "red";
             } else {
-              input.style.borderColor = "";
-              formData[field] = input.value.trim();
+              parent.style.borderColor = "";
             }
           });
 
           // Check email format
           const email = document.getElementById("email").value;
+          const emailParent = document
+            .getElementById("email")
+            .closest(".contact_form_input");
           const emailPattern =
             /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
           if (!emailPattern.test(email)) {
             isValid = false;
-            document.getElementById("email").style.borderColor = "red";
+            emailParent.style.borderColor = "red";
           } else {
-            document.getElementById("email").style.borderColor = "";
+            emailParent.style.borderColor = "";
           }
 
           if (isValid) {
             // Hide form and show success message
-            document.querySelector(".careerD_form_area").style.display = "none";
+            document.querySelector(".contact_form_area").style.display = "none";
             document.querySelector(".success_submit_wrapper").style.display =
               "block";
-
-            // // Display submitted data
-            // let submittedDataText = `Submitted Details:<br>
-            //                   First Name: ${formData.firstName}<br>
-            //                   Last Name: ${formData.lastName}<br>
-            //                   Email: ${formData.email}<br>
-            //                   Job Title: ${formData.jobTitle}<br>
-            //                   Company: ${formData.company}`;
-            // document.getElementById("submittedData").innerHTML =
-            //   submittedDataText;
           }
         });
     </script>

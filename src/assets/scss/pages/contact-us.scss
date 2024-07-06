@@ -37,6 +37,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 767px) {
+      height: 328px;
+      padding: 16px;
+    }
     .ssa_contain {
       text-align: center;
       max-width: 370px;
@@ -47,8 +51,25 @@
         margin: 0;
         font-weight: 500;
         color: $primary;
+        margin: 0;
       }
       p {
+        font-size: 18px;
+        line-height: 23px;
+        color: black;
+        margin: 0;
+        padding-top: 24px;
+      }
+      @media screen and (max-width: 767px) {
+        h2 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          // padding-top: 32px;
+        }
       }
     }
   }

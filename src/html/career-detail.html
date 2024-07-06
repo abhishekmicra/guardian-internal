@@ -139,16 +139,28 @@
         <div class="careerD_form_area">
           <div class="careerD_form_contain">
             <h2>Apply for this position</h2>
-            <form action="">
+            <form id="careerForm">
               <div class="careerD_form row">
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
-                    <input type="text" placeholder="First Name" class="w-100" />
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      class="w-100"
+                      id="firstName"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
-                    <input type="text" placeholder="Last Name" class="w-100" />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      class="w-100"
+                      id="lastName"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-12">
@@ -157,50 +169,50 @@
                       type="email"
                       placeholder="Email Address"
                       class="w-100"
+                      id="email"
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="careerD_form_input c_f_i_file w-100">
-                    <input type="file" placeholder="First Name" class="w-100" />
+                    <input type="file" class="w-100" id="resume" required />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="careerD_form_input w-100">
                     <input
-                      type="text"
+                      type="number"
                       placeholder="Salary Expectations"
                       class="w-100"
+                      id="salary"
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="careerD_form_input c_f_i_d w-100">
-                    <!-- <input type="text" placeholder="First Name" class="w-100" /> -->
-                    <div class="dropdown w-100">
-                      <button
-                        class="dropdown-toggle w-100 career_drop"
-                        type="button"
-                        id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
+                  <div class="single-select">
+                    <div
+                      class="careerD_form_input c_f_i_d select-trigger w-100"
+                    >
+                      <input
+                        type="text"
+                        placeholder="Part-Time"
+                        id="jobType"
+                        readonly
+                        required
+                      />
+                    </div>
+                    <div class="careerD-options">
+                      <span class="careerD-option" data-value="option1"
+                        >Part-Time</span
                       >
-                        Part-Time
-                      </button>
-                      <ul
-                        class="dropdown-menu w-100"
-                        aria-labelledby="dropdownMenuButton1"
+                      <span class="careerD-option" data-value="option2"
+                        >Full-Time</span
                       >
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </li>
-                      </ul>
+                      <span class="careerD-option" data-value="option3"
+                        >Internship</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -208,9 +220,10 @@
                   <div class="careerD_form_input w-100">
                     <textarea
                       name=""
-                      id=""
+                      id="whyFit"
                       placeholder="Why are you right for this role?"
                       class="w-100"
+                      required
                     ></textarea>
                   </div>
                   <p class="c_f_i_text">
@@ -219,17 +232,29 @@
                   </p>
                 </div>
               </div>
-              <a href="javascript:void(0)" class="c_f_btn">Submit</a>
+              <button type="submit" class="c_f_btn">Submit</button>
             </form>
             <p class="c_f_description">
               Your CV and the personal details contained in it are used solely
-              by Guardain to help recruit the right candidate for a specific
+              by Guardian to help recruit the right candidate for a specific
               role. These details will never be shared with any third parties
               and will be deleted either three months after you apply for a
-              position, or when the role is filled, whichever issooner. If you’d
-              like us to delete your details before then, please see our privacy
-              policy for information on how to contact us about this.
+              position, or when the role is filled, whichever is sooner. If
+              you’d like us to delete your details before then, please see our
+              privacy policy for information on how to contact us about this.
             </p>
+          </div>
+        </div>
+        <div class="success_careerD_wrapper" style="display: none">
+          <div class="success_careerD_area">
+            <div class="sca_contain">
+              <h2>Thank you for applying.</h2>
+              <p>
+                Your application has been received. If there is a fit, our team
+                will be getting back to you.
+              </p>
+              <a href="javascript:void(0)" class="success_go_back">Go back</a>
+            </div>
           </div>
         </div>
       </div>
@@ -245,5 +270,101 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/assets/js/app.min.js"></script>
+
+    <script>
+      // script.js
+      document.addEventListener("DOMContentLoaded", function () {
+        // Single Select Dropdown
+        const singleSelect = document.querySelector(".single-select");
+        const singleSelectTrigger = singleSelect.querySelector(
+          ".select-trigger input"
+        );
+        const singleOptions = singleSelect.querySelectorAll(".careerD-option");
+
+        singleSelectTrigger.addEventListener("click", function () {
+          singleSelect.classList.toggle("open");
+        });
+
+        singleOptions.forEach(function (option) {
+          option.addEventListener("click", function () {
+            singleSelectTrigger.value = this.textContent.trim();
+            singleSelect.classList.remove("open");
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!singleSelect.contains(event.target)) {
+            singleSelect.classList.remove("open");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .getElementById("careerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting normally
+
+          // Simple validation
+          let isValid = true;
+          const fields = [
+            "firstName",
+            "lastName",
+            "email",
+            "resume",
+            "salary",
+            "jobType",
+            "whyFit",
+          ];
+
+          fields.forEach(function (field) {
+            const input = document.getElementById(field);
+            const parent = input.closest(".careerD_form_input");
+          });
+
+          // Check email format
+          const email = document.getElementById("email").value;
+          const emailParent = document
+            .getElementById("email")
+            .closest(".careerD_form_input");
+          const emailPattern =
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+          if (isValid) {
+            // Hide form and show success message
+            document.querySelector(".careerD_form_area").style.display = "none";
+            document.querySelector(".success_careerD_wrapper").style.display =
+              "block";
+            document.querySelector(".careerD_contain_wrapper").style.display =
+              "none";
+            document.querySelector(
+              ".careerD_hero_wrapper"
+            ).style.backgroundColor = "transparent";
+          }
+        });
+
+      // Handle Job Type selection
+      document.querySelectorAll(".careerD-option").forEach((option) => {
+        option.addEventListener("click", function () {
+          document.getElementById("jobType").value = this.innerText;
+        });
+      });
+
+      // Handle Go Back button click
+      document
+        .querySelector(".success_go_back")
+        .addEventListener("click", function () {
+          // Show form and hide success message
+          document.querySelector(".careerD_form_area").style.display = "block";
+          document.querySelector(".success_careerD_wrapper").style.display =
+            "none";
+          document.querySelector(".careerD_contain_wrapper").style.display =
+            "block";
+          document.querySelector(
+            ".careerD_hero_wrapper"
+          ).style.backgroundColor = "#f2ecf9";
+        });
+    </script>
   </body>
 </html>
