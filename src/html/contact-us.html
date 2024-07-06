@@ -110,7 +110,6 @@
             <div class="ssa_contain">
               <h2>Your submission has been received!</h2>
               <p>We strive to respond within 2 working days.</p>
-              <p id="submittedData"></p>
             </div>
           </div>
         </div>
@@ -212,15 +211,15 @@
             document.querySelector(".success_submit_wrapper").style.display =
               "block";
 
-            // Display submitted data
-            let submittedDataText = `Submitted Details:<br>
-                              First Name: ${formData.firstName}<br>
-                              Last Name: ${formData.lastName}<br>
-                              Email: ${formData.email}<br>
-                              Job Title: ${formData.jobTitle}<br>
-                              Company: ${formData.company}`;
-            document.getElementById("submittedData").innerHTML =
-              submittedDataText;
+            // // Display submitted data
+            // let submittedDataText = `Submitted Details:<br>
+            //                   First Name: ${formData.firstName}<br>
+            //                   Last Name: ${formData.lastName}<br>
+            //                   Email: ${formData.email}<br>
+            //                   Job Title: ${formData.jobTitle}<br>
+            //                   Company: ${formData.company}`;
+            // document.getElementById("submittedData").innerHTML =
+            //   submittedDataText;
           }
         });
     </script>
