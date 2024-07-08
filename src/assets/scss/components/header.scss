@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 999;
   .nav_wrap {
-    transition: all 0.5s;
+    transition: width 0.6s;
     border-radius: 24px;
 
     @media screen and (max-width: 991px) {
@@ -341,7 +341,14 @@
 
   // }
   .nav_wrap {
-    max-width: 926px;
+    width: 926px;
+    @media screen and (max-width: 1024px) {
+      width: 860px;
+    }
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
     margin: 0px auto;
     border: 1px solid #e1e1e5;
     backdrop-filter: blur(50px);
