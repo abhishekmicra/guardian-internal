@@ -66,6 +66,10 @@
                 color: #7b3fc7;
                 font-weight: 500;
               }
+              &:hover {
+                color: #7b3fc7;
+                font-weight: 500;
+              }
             }
 
             .nav_link_a {
@@ -330,6 +334,9 @@
         &::after {
           transform: rotate(180deg);
         }
+        .blur_backdround {
+          display: block;
+        }
       }
     }
   }
@@ -337,9 +344,7 @@
 
 .active {
   transition: all 0.5s;
-  // @media screen and (max-width: 991px) {
 
-  // }
   .nav_wrap {
     width: 926px;
     @media screen and (max-width: 1024px) {
@@ -365,4 +370,21 @@
       }
     }
   }
+}
+
+.blur_background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: #35304c33;
+  backdrop-filter: blur(2px);
+  display: none;
+}
+
+.show_blury {
+  display: block;
+  
 }

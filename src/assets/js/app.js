@@ -49,6 +49,24 @@ $(document).ready(function () {
   });
 });
 
+// blur background
+$(document).ready(function () {
+  let openDropdowns = 0;
+
+  $(".nav_dropdown_link").on("show.bs.dropdown", function () {
+    openDropdowns++;
+    $(".blur_background").addClass("show_blury");
+  });
+
+  $(".nav_dropdown_link").on("hide.bs.dropdown", function () {
+    openDropdowns--;
+    if (openDropdowns === 0) {
+      $(".blur_background").removeClass("show_blury");
+    }
+  });
+});
+
+// active link color 
 document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll(".nav_link_a");

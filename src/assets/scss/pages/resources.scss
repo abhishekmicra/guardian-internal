@@ -89,7 +89,7 @@
         }
 
         .resourceD_back_btn {
-          background-color: #513f99;
+          background-color: #7b3fc7;
           width: 50px;
           height: 50px;
           display: flex;
@@ -99,31 +99,9 @@
           position: relative;
           overflow: hidden;
           transition: all 0.3s;
-          svg {
-            transition: all 0.3s;
-            &:nth-child(2) {
-              position: absolute;
-              left: 100%;
-            }
-          }
           &:hover {
-            background-color: transparent;
-            border: 3px solid #513f99;
+            background-color: #7b3fc7cc;
             transition: all 0.3s;
-
-            svg {
-              transition: all 0.3s;
-              path {
-                stroke: #513f99;
-              }
-              &:nth-child(1) {
-                transform: translateX(-100%);
-              }
-              &:nth-child(2) {
-                left: 50%;
-                transform: translateX(-50%);
-              }
-            }
           }
         }
 

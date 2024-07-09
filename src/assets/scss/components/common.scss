@@ -312,6 +312,8 @@
     padding: 8px;
     cursor: pointer;
     display: block;
+    transition: all 0.5s;
+    height: 100%;
     .resources_card_img {
       width: 100%;
       height: 353px;
@@ -325,36 +327,22 @@
         transition: all 0.5s;
       }
     }
-    p {
-      font-size: 24px;
-      line-height: 31px;
-      margin: 0;
-      color: $primary;
+    .resources_card_text {
       padding: 16px;
-      span {
-        transition: all 0.5s;
-        background: linear-gradient(
-          to bottom,
-          rgba($primary, 1) 0%,
-          rgba($primary, 1) 98%
-        );
-        background-size: 0px 2px;
-        background-repeat: no-repeat;
-        background-position: left 100%;
-      }
-    }
-    &:hover {
       p {
-        span {
-          background-size: 100% 2px;
-        }
-      }
-      .resources_card_img {
-        img {
-          transform: scale(1.05);
-        }
+        font-size: 24px;
+        line-height: 31px;
+        margin: 0;
+        color: $primary;
       }
     }
+
+    &:hover {
+      background-color: #f2ecf9;
+      border-radius: 20px;
+      transition: all 0.5s;
+    }
+
     @media screen and (max-width: 991px) {
       padding: 0;
       .resources_card_img {

@@ -10,7 +10,7 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
 
   @media screen and (max-width: 768px) {
     padding: 11px 24px;
@@ -23,18 +23,24 @@
 
   &.white {
     background-color: white;
-    color: $highlight;
+    color: #7b3fc7;
   }
 
   &.w_148 {
     width: 148px;
   }
 
-  
   &:hover {
     &.orchid {
       background-color: #60319d;
-      transition: all .3s;
+      transition: all 0.3s;
+    }
+  }
+
+  &:hover {
+    &.white {
+      background-color: #f2ecf9;
+      transition: all 0.3s;
     }
   }
 
