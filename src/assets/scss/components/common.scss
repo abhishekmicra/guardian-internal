@@ -25,6 +25,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
+  }
+  .common_hero_img1-2 {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    .common_hero_img1-1 {
+      display: none;
+    }
+    .common_hero_img1-2 {
+      display: block;
+    }
   }
   .common_hero_shap1 {
     background-color: white;
@@ -326,6 +338,17 @@
         object-fit: cover;
         transition: all 0.5s;
       }
+      .resources_card_img2 {
+        display: none;
+      }
+      @media screen and (max-width: 767px) {
+        .resources_card_img1 {
+          display: none;
+        }
+        .resources_card_img2 {
+          display: block;
+        }
+      }
     }
     .resources_card_text {
       padding: 16px;
@@ -335,12 +358,20 @@
         margin: 0;
         color: $primary;
       }
+      svg {
+        min-width: 20px;
+      }
     }
 
     &:hover {
       background-color: #f2ecf9;
       border-radius: 20px;
       transition: all 0.5s;
+      .resources_card_img {
+        img {
+          transform: scale(1.03);
+        }
+      }
     }
 
     @media screen and (max-width: 991px) {
@@ -348,10 +379,12 @@
       .resources_card_img {
         height: 328px;
       }
-      p {
-        font-size: 18px;
-        line-height: 23px;
+      .resources_card_text {
         padding: 16px 0px 0px 0px;
+        p {
+          font-size: 18px;
+          line-height: 23px;
+        }
       }
     }
   }

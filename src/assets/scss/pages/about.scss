@@ -109,6 +109,8 @@
     margin: 0;
     padding: 0;
     padding-top: 53px;
+    max-width: 926px;
+    margin: 0px auto;
     @media screen and (max-width: 991px) {
       padding-top: 32px;
     }
@@ -231,9 +233,6 @@
       padding-top: 24px;
     }
     .about_meet_card {
-      transition: all 0.5s;
-      cursor: pointer;
-
       .about_meet_img {
         width: 100%;
         height: 402px;
@@ -269,29 +268,6 @@
         margin: 0;
         padding-top: 16px;
         color: $primary;
-        // max-width: 300px;
-        span {
-          transition: all 0.5s;
-          background: linear-gradient(
-            to bottom,
-            rgba($primary, 1) 0%,
-            rgba($primary, 1) 98%
-          );
-          background-size: 0px 1px;
-          background-repeat: no-repeat;
-          background-position: left 100%;
-        }
-      }
-      &:hover {
-        transform: translateY(-10px);
-        .about_meet_img {
-          border-radius: 16px;
-        }
-        p {
-          span {
-            background-size: 100% 1px;
-          }
-        }
       }
       @media screen and (max-width: 1024px) {
         .about_meet_img {

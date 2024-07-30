@@ -1,3 +1,12 @@
+.coustomerB_title {
+  width: 100%;
+  max-width: 100% !important;
+  h1 {
+    max-width: 380px;
+    margin: 0px auto !important;
+  }
+}
+
 .Customer_carelist_wraper {
   padding-top: 120px;
   @media screen and (max-width: 991px) {

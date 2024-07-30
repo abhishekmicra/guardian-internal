@@ -66,7 +66,7 @@ $(document).ready(function () {
   });
 });
 
-// active link color 
+// active link color
 document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll(".nav_link_a");
@@ -205,7 +205,7 @@ $(window).scroll(function () {
           countNum: countTo,
         },
         {
-          duration: 3000,
+          duration: 1000,
           easing: "swing",
           step: function () {
             // Check if the target number has a decimal part

@@ -46,7 +46,7 @@
   p {
     font-size: 16px;
     line-height: 20px;
-    margin: 0;
+    margin-bottom: 20px;
     color: $primary;
     font-weight: 400;
     a {
@@ -54,92 +54,79 @@
       font-weight: 500;
     }
   }
-  .privacy_title {
+  h2 {
     font-size: 24px;
     line-height: 31px;
-    margin: 0;
+    margin: 40px 0px 16px;
     font-weight: 500;
     color: #1c1636;
   }
-  .privacy_sub_title {
+  h4 {
     font-size: 18px;
     line-height: 23px;
     color: $primary;
     font-weight: 500;
-    margin: 0;
+    margin-bottom: 20px;
   }
-  .privacy_contain_area {
+
+  h3 {
+    font-size: 18px;
+    line-height: 23px;
+    color: $primary;
+    font-weight: 500;
+    margin: 40px 0 20px;
+  }
+
+  h6 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    padding-bottom: 3px;
+  }
+
+  ul {
+    margin-bottom: 20px;
+    padding: 0;
+    li {
+      list-style-type: disc;
+      font-size: 16px;
+      color: $primary;
+      margin-left: 20px;
+    }
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
     display: grid;
-    gap: 40px;
-    .privacy_contain_01 {
-      display: grid;
-      gap: 20px;
-    }
-    .privacy_contain_02 {
-      display: grid;
-      gap: 16px;
-
-      .privacy_contain_02_sub {
-        display: grid;
-        gap: 16px;
-
-        ul {
-          margin: 0;
-          padding: 0;
-          p {
-            padding-bottom: 16px;
-          }
-          li {
-            list-style-type: disc;
-            font-size: 16px;
-            color: $primary;
-            margin-left: 20px;
-          }
-        }
-      }
-    }
-    .privacy_contain_03 {
-      display: grid;
-      gap: 20px;
-      ul {
+    gap: 24px;
+    margin-bottom: 16px;
+    li {
+      display: flex;
+      gap: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: $primary;
+      p {
         margin: 0;
-        padding: 0;
-        display: grid;
-        gap: 24px;
-        li {
-          display: flex;
-          gap: 10px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 20px;
-          color: $primary;
-          p {
-            padding-top: 16px;
-          }
-          ul {
-            margin: 0;
-            padding: 16px 0 0 0;
-            gap: 0;
-
-            li {
-              list-style-type: disc;
-              list-style-position: inside;
-              font-weight: 400;
-              display: unset;
-            }
-          }
-        }
       }
-    }
-    .privacy_contain_04 {
-      display: grid;
-      gap: 16px;
-      h6 {
-        margin: 0;
+      h5 {
+        margin-bottom: 16px;
         font-size: 16px;
         line-height: 20px;
         font-weight: 500;
-        padding-bottom: 3px;
+      }
+      ul {
+        margin: 0;
+        gap: 0;
+
+        li {
+          list-style-type: disc;
+          font-weight: 400;
+          display: revert;
+        }
       }
     }
   }
