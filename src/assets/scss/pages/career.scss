@@ -416,6 +416,7 @@
     max-width: 856px;
     margin: 0px auto;
     gap: 16px 0;
+    align-items: end;
 
     @media screen and (max-width: 991px) {
       padding-top: 24px;
@@ -431,6 +432,7 @@
       font-size: 16px;
       line-height: 20px;
       color: $primary;
+      white-space: normal;
 
       &::after {
         background-image: url(/assets/img/navbar/down-arrow.svg);
@@ -470,7 +472,7 @@
     }
 
     .dropdown-menu {
-      width: 100%;
+      min-width: 100%;
     }
   }
 
@@ -576,6 +578,47 @@
             font-size: 14px;
             line-height: 18px;
           }
+        }
+      }
+    }
+  }
+  .c_ol_notFound_wrap {
+    margin-top: 56px;
+    padding: 80px;
+    background-color: #f2ecf9;
+    border-radius: 40px;
+    .c_ol_notFound_area {
+      background-color: white;
+      padding: 80px 50px;
+      border-radius: 20px;
+      text-align: center;
+      h3 {
+        margin: 0;
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 500;
+        color: #1c1636;
+      }
+      p {
+        margin: 0;
+        padding-top: 16px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #1c1636;
+        font-weight: 400;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      padding: 16px;
+      .c_ol_notFound_area {
+        padding: 40px 24px;
+        h3 {
+          font-size: 32px;
+          line-height: 41px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 20px;
         }
       }
     }

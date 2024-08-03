@@ -373,6 +373,7 @@
     img {
       position: absolute;
       border-radius: 16px;
+      z-index: 99;
       &:nth-child(1) {
         width: 349px;
         height: auto;

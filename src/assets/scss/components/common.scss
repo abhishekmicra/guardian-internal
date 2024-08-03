@@ -17,8 +17,7 @@
 .common_hero_img1 {
   height: 512px;
   width: 100%;
-  border-radius: 40px;
-  overflow: hidden;
+  // overflow: hidden;
   margin-top: 40px;
   position: relative;
   img {
@@ -26,11 +25,15 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
+    border-radius: 40px;
   }
   .common_hero_img1-2 {
     display: none;
   }
   @media screen and (max-width: 767px) {
+    img {
+      border-radius: 20px;
+    }
     .common_hero_img1-1 {
       display: none;
     }
@@ -40,17 +43,18 @@
   }
   .common_hero_shap1 {
     background-color: white;
-    height: 60px;
+    height: 62px;
     width: 80%;
     padding: 0;
     border-radius: 0px 40px;
     position: relative;
+    margin-top: -2px;
 
     &::after {
       content: "";
       position: absolute;
       background-image: url("/assets/img/home/radius-vector.svg");
-      top: -2px;
+      top: -1px;
       left: -37px;
       background-repeat: no-repeat;
       width: 40px;
@@ -61,7 +65,7 @@
       content: "";
       position: absolute;
       background-image: url("/assets/img/home/radius-vector.svg");
-      bottom: -37px;
+      bottom: -38px;
       right: 0px;
       background-repeat: no-repeat;
       width: 40px;
@@ -74,22 +78,22 @@
 
     @media screen and (max-width: 767px) {
       height: 356px;
-      border-radius: 20px;
       .common_hero_shap1 {
         height: 50px;
         width: 75%;
         border-radius: 0px 20px;
+
         &::after {
           background-image: url("/assets/img/home/radius-vector20.svg");
-          top: -2px;
-          left: -18px;
+          top: 2px;
+          left: -19px;
           width: 20px;
           height: 20px;
         }
         &::before {
           background-image: url("/assets/img/home/radius-vector20.svg");
           bottom: -20px;
-          right: -2px;
+          right: -1px;
           width: 20px;
           height: 20px;
           transform: rotate(180deg);

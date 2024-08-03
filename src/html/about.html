@@ -313,8 +313,8 @@
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.about_delivery_wrapper',
-                start: 'top 70%',
-                end: 'bottom 30%',
+                start: 'top 85%',
+                end: 'bottom 100%',
                 scrub: 1
             }
         });
@@ -323,6 +323,11 @@
             y: 300,
             ease: "ease",
             stagger: 0.1
+        }).to('.g_image', {
+            y: -100,
+            duration: 2,
+            ease: "none",
+            yoyo: true
         });
     </script>
 

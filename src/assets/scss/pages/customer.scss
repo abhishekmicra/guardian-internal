@@ -1,9 +1,7 @@
 .coustomerB_title {
-  width: 100%;
-  max-width: 100% !important;
+  max-width: 690px !important;
   h1 {
-    max-width: 380px;
-    margin: 0px auto !important;
+    text-wrap: balance;
   }
 }
 
@@ -22,9 +20,21 @@
       height: 100%;
       object-fit: cover;
     }
+    .Customer_carelist_img2 {
+      display: none;
+    }
     @media screen and (max-width: 991px) {
       height: 261px;
       border-radius: 20px;
+
+      @media screen and (max-width: 767px) {
+        .Customer_carelist_img1 {
+          display: none;
+        }
+        .Customer_carelist_img2 {
+          display: block;
+        }
+      }
     }
   }
   .Customer_carelist_contain {

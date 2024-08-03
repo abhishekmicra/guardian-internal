@@ -6,6 +6,14 @@
 
   .techS_hero_title {
     gap: 16px 0;
+    ul {
+      color: #ff4312;
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 500;
+      margin: 0;
+      padding: 0;
+    }
     span {
       color: #ff4312;
       font-size: 18px;
@@ -35,6 +43,19 @@
       p {
         font-size: 16px;
         line-height: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        h1 {
+          padding-top: 8px;
+        }
+        ul {
+          font-size: 16px;
+          line-height: 20px;
+          padding-left: 20px;
+          li {
+            list-style: disc;
+          }
+        }
       }
     }
   }
@@ -276,9 +297,45 @@
   .techS_optimize_area {
     gap: 32px 0;
     .techS_optimize_img {
+      position: relative;
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(/assets/img/solutions/delivery-vctor3.svg);
+        width: 159px;
+        height: 118px;
+      }
+      .techS_optimize_img2 {
+        display: none;
+      }
+      @media screen and (max-width: 768px) {
+        img {
+          border-radius: 20px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-image: url(/assets/img/solutions/delivery-vctor4.svg);
+          width: 91px;
+          height: 74px;
+        }
+
+        .techS_optimize_img1 {
+          display: none;
+        }
+        .techS_optimize_img2 {
+          display: block;
+        }
       }
     }
 
@@ -370,11 +427,13 @@
       display: flex;
       align-items: flex-start;
       gap: 18px;
+      height: 93px;
       .techData_fragmented_ckeck {
         padding: 11px 11px 11px 0px;
         background-color: white;
         border-radius: 0 0 20px 0;
         position: relative;
+
         &::after {
           content: "";
           position: absolute;
@@ -413,6 +472,7 @@
     ul {
       gap: 16px;
       li {
+        height: 90px;
         p {
           font-size: 18px;
           line-height: 23px;
@@ -441,9 +501,20 @@
         object-fit: cover;
       }
     }
+    .techData_healthcare_img2 {
+      display: none;
+    }
     @media screen and (max-width: 991px) {
       height: 261px;
       border-radius: 12px;
+      @media screen and (max-width: 767px) {
+        .techData_healthcare_img2 {
+          display: block;
+        }
+        .techData_healthcare_img1 {
+          display: none;
+        }
+      }
     }
   }
 
